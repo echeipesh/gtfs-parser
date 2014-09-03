@@ -18,9 +18,7 @@ object GtfsparserBuild extends Build {
           
           "org.scalatest" % "scalatest_2.10" % "2.1.0" % "test",
           "com.github.nscala-time" %% "nscala-time" % "0.8.0",
-          "com.typesafe.slick" %% "slick" % "2.0.1",
           "org.slf4j" % "slf4j-nop" % "1.6.4",
-          "postgresql" % "postgresql" % "9.1-901.jdbc4",
 
           "commons-io" % "commons-io" % "2.4",
 
@@ -29,7 +27,7 @@ object GtfsparserBuild extends Build {
           "com.azavea.geotrellis" %% "geotrellis-slick" % "0.10.0-SNAPSHOT",
 
           "org.joda" % "joda-convert" % "1.5",
-          "com.github.tototoshi" %% "slick-joda-mapper" % "1.0.1"
+          "com.github.tototoshi" %% "slick-joda-mapper" % "1.2.0"
         )
     )
   )
