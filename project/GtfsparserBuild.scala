@@ -18,7 +18,6 @@ object GtfsparserBuild extends Build {
           
           "org.scalatest" % "scalatest_2.10" % "2.1.0" % "test",
           "com.github.nscala-time" %% "nscala-time" % "0.8.0",
-          "org.slf4j" % "slf4j-nop" % "1.6.4",
 
           "commons-io" % "commons-io" % "2.4",
 
