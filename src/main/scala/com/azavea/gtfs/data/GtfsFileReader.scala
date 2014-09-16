@@ -142,10 +142,15 @@ class GtfsFileReader(dir:String) extends GtfsReader {
     try { //this file is optional
       for (c <- CsvParser.fromPath(dir + "/calendar_dates.txt"))
       yield {
+        val sid = c("service_id").get.intern
         ServiceException(
-          service_id = c("service_id").get.intern,
+          service_id = sid,
           date = c("date").get,
-          exception = if (c("exception_type") == "1") 'Add else 'Remove
+          exception = c("exception_type").get.toInt match {
+            case 1 => 'Add
+            case 2 => 'Remove
+            case x => sys.error(s"Unsupported exception_type($x) for service ${sid}")
+          }
         )
       }
     }catch {
